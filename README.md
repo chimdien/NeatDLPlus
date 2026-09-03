@@ -14,13 +14,15 @@ While the original extension catches every download indiscriminately, **Neat DL+
 ## 🚀 Key Features
 
 ### 1. 🌐 Smart Website Exclusion
-<img width="602" height="412" alt="Google Chrome 2026-09-03 16 32 38" src="https://github.com/user-attachments/assets/a79f69a1-2397-4e7b-a0ff-3e93938b8488" />
+
+<img width="594" height="414" alt="Google Chrome 2026-09-03 16 35 27" src="https://github.com/user-attachments/assets/38efe75d-5abd-47ed-a385-958012e9ccdb" />
 
 - **One-Click Quick Exclude**: Check "Exclude this site" directly in the popup or right-click anywhere on the page and select **"Exclude this site from Neat DL+"**.
 - **Clean Domain Normalization**: Automatically extracts root hostnames and strips tracking query parameters (UTM tags, tokens, sub-paths) so rules apply reliably across the entire site.
 - **Subdomain Coverage**: Automatically protects subdomains when parent domains are excluded.
 
 ### 2. 📁 File Type Exclusion Rules
+
 <img width="1244" height="1070" alt="Google Chrome 2026-09-03 16 32 52" src="https://github.com/user-attachments/assets/b445b713-421e-4dab-84a1-309c7f0c099e" />
 
 - **Custom Extension Filters**: Define file extensions to ignore (e.g., `*.dat`, `*.tmp`, `*.iso`, `*.log`).
@@ -28,6 +30,7 @@ While the original extension catches every download indiscriminately, **Neat DL+
 - **Direct Browser Download**: Matched file types bypass NDM interception and download natively in Chrome without interruption.
 
 ### 3. ⚖️ File Size Limits (Catcher Thresholds)
+
 <img width="1246" height="1534" alt="Google Chrome 2026-09-03 16 33 08" src="https://github.com/user-attachments/assets/f5fe28fb-a36b-4335-b52e-39f855704ea3" />
 
 - **Minimum Size Filter**: Ignore downloads smaller than $X$ (e.g., icons, small preview clips, thumbnails).
@@ -36,6 +39,7 @@ While the original extension catches every download indiscriminately, **Neat DL+
 - **Live Status Indicator**: Real-time summary showing active threshold bounds (e.g., *Catching files between 10 MB and 1 GB*).
 
 ### 4. 💾 Backup & Restore (JSON Config)
+
 <img width="1258" height="1364" alt="Google Chrome 2026-09-03 16 33 14" src="https://github.com/user-attachments/assets/b6adcec9-1122-4dc1-bfc2-fce453843eac" />
 
 - **Export Settings**: Download a formatted `neat-dl-plus-config.json` containing all your excluded sites, file formats, and size limits.
@@ -99,6 +103,8 @@ NeatDLPlus/
 5. **Verify & Pin**:
    - **Neat DL+** will appear in your extensions list.
    - Click the **Puzzle Icon (Extensions)** on your browser toolbar and pin **Neat DL+** for quick access.
+
+<img width="1500" height="1270" alt="CleanShot 2026-09-03 at 16 36 02@2x" src="https://github.com/user-attachments/assets/47528974-1e28-45b3-9fb0-0afa59423600" />
 
 ---
 
