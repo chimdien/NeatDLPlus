@@ -15,7 +15,7 @@ While the original extension catches every download indiscriminately, **Neat DL+
 
 ### 1. 🌐 Smart Website Exclusion
 
-<img width="594" height="414" alt="Google Chrome 2026-09-03 16 35 27" src="https://github.com/user-attachments/assets/38efe75d-5abd-47ed-a385-958012e9ccdb" />
+<img width="590" height="404" alt="CleanShot 2026-09-03 at 16 37 42@2x" src="https://github.com/user-attachments/assets/e8525987-b144-4525-8d96-81d0e002f535" />
 
 - **One-Click Quick Exclude**: Check "Exclude this site" directly in the popup or right-click anywhere on the page and select **"Exclude this site from Neat DL+"**.
 - **Clean Domain Normalization**: Automatically extracts root hostnames and strips tracking query parameters (UTM tags, tokens, sub-paths) so rules apply reliably across the entire site.
@@ -104,7 +104,7 @@ NeatDLPlus/
    - **Neat DL+** will appear in your extensions list.
    - Click the **Puzzle Icon (Extensions)** on your browser toolbar and pin **Neat DL+** for quick access.
 
-<img width="1500" height="1270" alt="CleanShot 2026-09-03 at 16 36 02@2x" src="https://github.com/user-attachments/assets/47528974-1e28-45b3-9fb0-0afa59423600" />
+<img width="1498" height="728" alt="CleanShot 2026-09-03 at 16 38 41@2x" src="https://github.com/user-attachments/assets/c148da50-acce-4b93-af8e-717cc86b5895" />
 
 ---
 
