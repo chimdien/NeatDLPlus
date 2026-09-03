@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neat DL+ Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="img/icon48.png" alt="Neat DL+" class="header-icon" width="32" height="32">
+      <h1 class="header-title">Neat DL+ Settings</h1>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true" data-tab="websites">Websites</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="filetypes">File Types</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="sizelimits">Size Limits</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="backup">Backup & Restore</button>
+    </nav>
+
+    <!-- Excluded Websites Panel -->
+    <section class="panel active" id="panel-websites" role="tabpanel">
+      <div class="section-intro">
+        <h2 class="section-heading">Excluded Websites</h2>
+        <p class="section-desc">Add websites where downloads and media should not be intercepted by Neat DL+.</p>
+      </div>
+      <div class="input-row">
+        <input
+          type="text"
+          id="website-input"
+          class="input"
+          placeholder="e.g. example.com or https://example.com"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button class="btn-add" id="btn-add-website">Add</button>
+      </div>
+      <p class="validation-msg" id="website-validation"></p>
+      <ul class="item-list" id="website-list"></ul>
+      <p class="empty-state" id="website-empty">No excluded websites yet.</p>
+      <p class="tip">💡 Right-click on any page and select "Exclude this site from Neat DL+" for quick access.</p>
+    </section>
+
+    <!-- Excluded File Types Panel -->
+    <section class="panel" id="panel-filetypes" role="tabpanel">
+      <div class="section-intro">
+        <h2 class="section-heading">Excluded File Types</h2>
+        <p class="section-desc">Specify file extensions that Neat DL+ should ignore and allow the browser to download directly.</p>
+      </div>
+      <div class="input-row">
+        <input
+          type="text"
+          id="filetype-input"
+          class="input"
+          placeholder="e.g. *.dat or dat"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button class="btn-add" id="btn-add-filetype">Add</button>
+      </div>
+      <p class="validation-msg" id="filetype-validation"></p>
+      <ul class="item-list" id="filetype-list"></ul>
+      <p class="empty-state" id="filetype-empty">No excluded file types yet.</p>
+      <p class="tip">💡 Downloads matching these patterns will not be intercepted by Neat DL+.</p>
+    </section>
+
+    <!-- Size Limits Panel -->
+    <section class="panel" id="panel-sizelimits" role="tabpanel">
+      <div class="section-intro">
+        <h2 class="section-heading">Catcher File Size Limits</h2>
+        <p class="section-desc">Exclude downloads based on file size. Files outside your chosen boundaries will be downloaded directly by the browser.</p>
+      </div>
+
+      <div class="limit-cards">
+        <!-- Min Size Row -->
+        <div class="limit-card">
+          <div class="limit-header">
+            <label class="toggle" for="toggle-min-size">
+              <input type="checkbox" id="toggle-min-size" class="toggle-input">
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+            <div class="limit-meta">
+              <span class="limit-title">Ignore files smaller than</span>
+              <span class="limit-desc">Skip small downloads like icons, thumbnails, and preview clips</span>
+            </div>
+          </div>
+          <div class="limit-controls" id="min-size-controls">
+            <input
+              type="number"
+              id="min-size-val"
+              class="input input-number"
+              min="0.01"
+              step="any"
+              placeholder="e.g. 5"
+              value="5"
+            >
+            <div class="unit-pills" id="min-unit-pills" role="group" aria-label="Min size unit">
+              <button type="button" class="btn-unit" data-unit="KB">KB</button>
+              <button type="button" class="btn-unit active" data-unit="MB">MB</button>
+              <button type="button" class="btn-unit" data-unit="GB">GB</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Max Size Row -->
+        <div class="limit-card">
+          <div class="limit-header">
+            <label class="toggle" for="toggle-max-size">
+              <input type="checkbox" id="toggle-max-size" class="toggle-input">
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+            <div class="limit-meta">
+              <span class="limit-title">Ignore files larger than</span>
+              <span class="limit-desc">Skip very large files and let your browser handle them</span>
+            </div>
+          </div>
+          <div class="limit-controls" id="max-size-controls">
+            <input
+              type="number"
+              id="max-size-val"
+              class="input input-number"
+              min="0.01"
+              step="any"
+              placeholder="e.g. 500"
+              value="500"
+            >
+            <div class="unit-pills" id="max-unit-pills" role="group" aria-label="Max size unit">
+              <button type="button" class="btn-unit" data-unit="KB">KB</button>
+              <button type="button" class="btn-unit active" data-unit="MB">MB</button>
+              <button type="button" class="btn-unit" data-unit="GB">GB</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-box">
+        <span class="status-indicator"></span>
+        <span class="status-text" id="size-status-text">No size limits active (all sizes intercepted)</span>
+      </div>
+
+      <div class="save-row">
+        <button class="btn-primary" id="btn-save-sizes">Save Size Limits</button>
+        <span class="action-feedback" id="size-save-feedback"></span>
+      </div>
+
+      <p class="tip">💡 File sizes are checked against the HTTP Content-Length header. Click KB, MB, or GB to select your preferred unit.</p>
+    </section>
+
+    <!-- Backup & Restore Panel -->
+    <section class="panel" id="panel-backup" role="tabpanel">
+      <div class="section-intro">
+        <h2 class="section-heading">Backup & Restore</h2>
+        <p class="section-desc">Export your entire Neat DL+ configuration (excluded websites, excluded file types, size limits) to a JSON file to prevent losing settings when reinstalling.</p>
+      </div>
+
+      <div class="backup-grid">
+        <!-- Export Card -->
+        <div class="backup-box">
+          <div class="backup-box-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
+          <h3 class="backup-box-title">Export Settings</h3>
+          <p class="backup-box-desc">Download a JSON backup of all your current exclusion rules and size limits.</p>
+          <button class="btn-primary btn-block" id="btn-export-json">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 6px;">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+            </svg>
+            Export JSON
+          </button>
+        </div>
+
+        <!-- Import Card -->
+        <div class="backup-box">
+          <div class="backup-box-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="backup-box-title">Import Settings</h3>
+          <p class="backup-box-desc">Restore settings from a previously saved neat-dl-plus-config.json file.</p>
+          <input type="file" id="file-import-json" accept=".json,application/json" style="display:none">
+          <button class="btn-secondary btn-block" id="btn-import-json">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 6px;">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+            </svg>
+            Import JSON
+          </button>
+        </div>
+      </div>
+
+      <div class="summary-stats">
+        <div class="stat-pill"><span class="stat-num" id="stat-sites-num">0</span> websites</div>
+        <div class="stat-pill"><span class="stat-num" id="stat-files-num">0</span> file types</div>
+        <div class="stat-pill"><span class="stat-num" id="stat-size-num">Off</span> size filter</div>
+      </div>
+
+      <div class="backup-notification" id="backup-notification" style="display: none;"></div>
+
+      <p class="tip">💡 Exported files are standard JSON formatted and can be safely archived in Google Drive, iCloud, or Dropbox.</p>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
