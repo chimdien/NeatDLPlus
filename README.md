@@ -14,22 +14,30 @@ While the original extension catches every download indiscriminately, **Neat DL+
 ## 🚀 Key Features
 
 ### 1. 🌐 Smart Website Exclusion
+<img width="602" height="412" alt="Google Chrome 2026-09-03 16 32 38" src="https://github.com/user-attachments/assets/a79f69a1-2397-4e7b-a0ff-3e93938b8488" />
+
 - **One-Click Quick Exclude**: Check "Exclude this site" directly in the popup or right-click anywhere on the page and select **"Exclude this site from Neat DL+"**.
 - **Clean Domain Normalization**: Automatically extracts root hostnames and strips tracking query parameters (UTM tags, tokens, sub-paths) so rules apply reliably across the entire site.
 - **Subdomain Coverage**: Automatically protects subdomains when parent domains are excluded.
 
 ### 2. 📁 File Type Exclusion Rules
+<img width="1244" height="1070" alt="Google Chrome 2026-09-03 16 32 52" src="https://github.com/user-attachments/assets/b445b713-421e-4dab-84a1-309c7f0c099e" />
+
 - **Custom Extension Filters**: Define file extensions to ignore (e.g., `*.dat`, `*.tmp`, `*.iso`, `*.log`).
 - **Flexible Syntax**: Accepts `dat`, `.dat`, or `*.dat` and normalizes them automatically.
 - **Direct Browser Download**: Matched file types bypass NDM interception and download natively in Chrome without interruption.
 
 ### 3. ⚖️ File Size Limits (Catcher Thresholds)
+<img width="1246" height="1534" alt="Google Chrome 2026-09-03 16 33 08" src="https://github.com/user-attachments/assets/f5fe28fb-a36b-4335-b52e-39f855704ea3" />
+
 - **Minimum Size Filter**: Ignore downloads smaller than $X$ (e.g., icons, small preview clips, thumbnails).
 - **Maximum Size Filter**: Ignore downloads larger than $Y$ (let browser handle heavy files if preferred).
 - **Clickable Unit Selector**: Easily switch between **`KB`**, **`MB`**, and **`GB`** with responsive segmented buttons.
 - **Live Status Indicator**: Real-time summary showing active threshold bounds (e.g., *Catching files between 10 MB and 1 GB*).
 
 ### 4. 💾 Backup & Restore (JSON Config)
+<img width="1258" height="1364" alt="Google Chrome 2026-09-03 16 33 14" src="https://github.com/user-attachments/assets/b6adcec9-1122-4dc1-bfc2-fce453843eac" />
+
 - **Export Settings**: Download a formatted `neat-dl-plus-config.json` containing all your excluded sites, file formats, and size limits.
 - **Import Settings**: Restore your configuration with one click after reinstalling your browser or setting up a new computer.
 - **Automatic Deduplication & Validation**: Sanitizes data upon import to prevent corrupt rules or duplicates.
