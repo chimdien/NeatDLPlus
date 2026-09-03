@@ -83,7 +83,7 @@ NeatDLPlus/
 
 1. **Download or Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/NeatDownloader.git
+   git clone https://github.com/chimdien/NeatDownloader.git
    ```
    *(Or download and extract the ZIP file).*
 
