@@ -1,7 +1,7 @@
 # Neat DL+ ⚡
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue?style=flat-square)](https://developer.chrome.com/docs/extensions/mv3/intro/)
-[![Version](https://img.shields.io/badge/Version-2.0.0-emerald?style=flat-square)](https://github.com/)
+[![Version](https://img.shields.io/badge/Version-2.0.0-emerald?style=flat-square)](https://github.com/chimdien/NeatDLPlus/releases)
 [![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows-lightgrey?style=flat-square)](https://www.neatdownloadmanager.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
@@ -81,11 +81,17 @@ NeatDLPlus/
 
 ### Step-by-Step Setup:
 
-1. **Download or Clone the Repository**:
-   ```bash
-   git clone https://github.com/chimdien/NeatDLPlus.git
-   ```
-   *(Or download and extract the ZIP file).*
+1. **Get the Extension Source Code** (Choose one of the methods):
+
+   - **Method A: Download from Releases (Recommended for non-developers)**
+     1. Go to the [**NeatDLPlus Releases**](https://github.com/chimdien/NeatDLPlus/releases) page.
+     2. Under the latest version, download the **`Source code (zip)`** (or release package).
+     3. Unzip the downloaded file to a convenient, permanent directory on your computer.
+
+   - **Method B: Clone via Git (Recommended for developers)**
+     ```bash
+     git clone https://github.com/chimdien/NeatDLPlus.git
+     ```
 
 2. **Open Your Chromium Browser's Extension Manager**:
    - **Google Chrome**: Go to `chrome://extensions/`
@@ -96,9 +102,9 @@ NeatDLPlus/
 3. **Enable Developer Mode**:
    - Turn on the **Developer mode** toggle in the top-right corner of the extensions page.
 
-4. **Load the Extension**:
+4. **Load the Unpacked Extension**:
    - Click the **Load unpacked** button (top-left).
-   - In the folder picker, select the **`NeatDLPlus`** directory (the folder containing `manifest.json`).
+   - In the file picker, select the extracted/cloned **`NeatDLPlus`** folder (the directory containing `manifest.json`).
 
 5. **Verify & Pin**:
    - **Neat DL+** will appear in your extensions list.
